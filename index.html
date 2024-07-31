@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FüllstandsensorWebsite</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="overallStyle">
+      <div id="add-sensor">
+        <h2>Neuen Sensor hinzufügen</h2>
+        <div class="input-container">
+          <div class="input-group">
+            <label for="address">Adresse:</label>
+            <input type="text" id="address" placeholder="Adresse eingeben" />
+          </div>
+          <div class="input-group">
+            <label for="api-url">API URL:</label>
+            <input
+              type="text"
+              id="api-url"
+              placeholder="https://example.com/php/get-data"
+            />
+          </div>
+        </div>
+        <br />
+        <button id="add-sensor-button">Sensor hinzufügen</button>
+      </div>
+
+      <div id="sensor-list">
+        <h2>Sensoren</h2>
+        <!-- Liste der Sensoren wird hier angezeigt -->
+      </div>
+      <div id="route-list">
+        <h2>Routenliste</h2>
+        <!-- Liste der Adressen wird hier angezeigt -->
+      </div>
+      <button id="create-route-button">Route erstellen</button>
+      <div id="map"></div>
+    </div>
+    <script src="scripts.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJ1JIx5Tp2y-PP56aR8kN_FgedN22m40&callback=initMap"
+    ></script>
+  </body>
+</html>
